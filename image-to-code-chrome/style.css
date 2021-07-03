@@ -1,0 +1,53 @@
+:root {
+	--vscode-foreground: #cccccc;
+	--vscode-editor-background: #1e1e1e;
+	--vscode-font-family: Consolas, 'Courier New', monospace;
+	--vscode-editor-font-weight: normal;
+	--vscode-editor-font-size: 14px;
+	--vscode-list-focusOutline: #007fd4;
+	--vscode-input-background: #3c3c3c;
+	--vscode-button-background: #0e639c;
+	--vscode-button-hoverBackground: #1177bb;
+	--vscode-button-foreground: #ffffff;
+	--vscode-focusBorder: rgba(255, 255, 255, 0);
+	--vscode-editorWidget-border: rgba(255, 255, 255, 0.06);
+	--vscode-panel-border: rgba(0, 0, 0, 0.38);
+	--vscode-textLink-activeForeground: #a6accd;
+	--vscode-tab-activeBorder: #80cbc4;
+}
+
+* {
+	font-size: var(--vscode-editor-font-size);
+	font-family: var(vscode);
+	line-height: 19px;
+	font-weight: normal;
+	outline: var(--vscode-list-focusOutline);
+}
+html {
+	border: 1px solid var(--vscode-panel-border);
+}
+body {
+	background: var(--vscode-editor-background);
+	color: var(--vscode-foreground);
+}
+#widget {
+	background: var(--vscode-editor-background);
+	color: var(--vscode-foreground);
+}
+input {
+	background: var(--vscode-input-background);
+}
+.btn {
+	background: var(--vscode-button-background);
+	color: var(--vscode-button-foreground);
+	border: none;
+}
+.btn:hover {
+	background: var(--vscode-button-hoverBackground);
+	color: var(--vscode-textLink-activeForeground);
+}
+
+.btn:focus {
+	background: var(--vscode-button-hoverBackground);
+	color: var(--vscode-tab-activeBorder);
+}

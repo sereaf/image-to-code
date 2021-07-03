@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<canvas id="canvasBottom"></canvas>
+			<canvas id="canvasTop"></canvas>
+			<div id="widget">
+				<div id="inner">
+					<button class="btn" id="crop">Crop</button>
+					<button class="btn" id="copyToClipboard" disabled>
+						Copy to Clipboard
+					</button>
+					<button class="btn" id="sendToVscode" disabled>
+						Send to Vscode
+					</button>
+					<div id="ckeckboxWrapper">
+						<label for="doThreshold">THRESHOLD</label>
+						<input
+							type="checkbox"
+							name="doThreshold"
+							id="doThreshold"
+						/>
+						<label for="doInverse">INVERSE</label>
+						<input
+							type="checkbox"
+							name="doInverse"
+							id="doInverse"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			#wrapper {
+				position: relative;
+			}
+			#canvasTop,
+			#canvasBottom {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			#widget {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 20vw;
+				height: 30vh;
+			}
+			#inner {
+				width: 50%;
+				height: 50%;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				position: relative;
+				display: grid;
+				grid-template-rows: repeat(3, 1fr);
+				gap: 10px;
+			}
+			#ckeckboxWrapper,
+			.btn {
+				grid-column: 1 / 5;
+			}
+			#ckeckboxWrapper {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				text-align: center;
+			}
+		</style>
+		<script src="screenshot.js"></script>
+		<script src="theme.js"></script>
+		<script src="tesseract.js"></script>
+	</body>
+</html>
